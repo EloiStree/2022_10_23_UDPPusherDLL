@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>UDPPusherOmiDLLDemo</RootNamespace>
+    <AssemblyName>AssemblyUDPPusherOmiDLLDemo</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\2022_10_23_UDPPusherOmiDLL\2022_10_23_UDPPusherOmiDLL.csproj" />
+  </ItemGroup>
+
+</Project>
