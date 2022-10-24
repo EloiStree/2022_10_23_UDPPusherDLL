@@ -17,6 +17,7 @@ namespace UDPPusherOmiDLLDemo
             (new Thread(new ThreadStart(() => SenderPush(500, "A")))).Start();
             (new Thread(new ThreadStart(() => SenderPush(1000, "B")))).Start();
             (new Thread(new ThreadStart(() => SenderPush(2000, "C")))).Start();
+
             (new Thread(new ThreadStart(() => ListenToMessage(10)))).Start();
 
         }
@@ -35,17 +36,24 @@ namespace UDPPusherOmiDLLDemo
         }
         private static void ListenToMessage(int milliSeconds)
         {
-            m_server = new DefaultCommandLineUdpServer();
-            List<string> m_messageReceived = new List<string>() ;
-            while (m_keepAlive)
+            try
             {
-                m_server.FlushReceivedMessagesInRef(ref m_messageReceived);
-                foreach (var item in m_messageReceived)
+                m_server = new DefaultCommandLineUdpServer();
+                List<string> m_messageReceived = new List<string>();
+                while (m_keepAlive)
                 {
-                    Console.WriteLine(item);
+                    m_server.FlushReceivedMessagesInRef(ref m_messageReceived);
+                    foreach (var item in m_messageReceived)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    m_messageReceived.Clear();
+                    Thread.Sleep(milliSeconds);
                 }
-                m_messageReceived.Clear();
-                Thread.Sleep(milliSeconds);
+            }
+            catch (Exception e) {
+                Console.Write("E:Server not.");
+            
             }
         }
     }

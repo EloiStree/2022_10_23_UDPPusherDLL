@@ -2,6 +2,10 @@
 
 namespace UDPPusherOmiDLL
 {
+
+    /// <summary>
+    /// When you do multithreading application you need a temp queue to avoid conflict between the thread that received and the thread that process the message received.
+    /// </summary>
     [System.Serializable]
     public class ThreadReceivedMessageQueue {
 

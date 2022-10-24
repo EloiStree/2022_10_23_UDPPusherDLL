@@ -7,8 +7,8 @@
     <ProjectGuid>{35F090D8-987B-4908-BC7D-541F81CF97B5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UDPPusherOmiDLL</RootNamespace>
-    <AssemblyName>AssemblyUDPPusherOmiDLL</AssemblyName>
+    <RootNamespace>UDPPusherDLL</RootNamespace>
+    <AssemblyName>AssemblyUDPPusherDLL</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IUdpMessagePusher.cs" />
+    <Compile Include="Interfaces\IUdpMessageReceiver.cs" />
     <Compile Include="Listen\DefaultCommandLineUdpServer.cs" />
     <Compile Include="Push\OmiUdpPusher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -48,7 +50,8 @@
     <Compile Include="Listen\UDPListenerThread.cs" />
     <Compile Include="Push\UDPPusher.cs" />
     <Compile Include="Push\UDPPusherDefault.cs" />
-    <Compile Include="Push\UDPTarget.cs" />
+    <Compile Include="Push\UDPTargetParams.cs" />
+    <Compile Include="Interfaces\UdpMessagePusherBuilder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

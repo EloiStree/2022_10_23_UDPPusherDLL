@@ -1,17 +1,21 @@
 ﻿namespace UDPPusherOmiDLL
 {
+
+    /// <summary>
+    /// Allow to target an address and a port
+    /// </summary>
     [System.Serializable]
-    public class UDPTarget
+    public class UDPTargetParams
     {
         public string   m_ipAddress = UDPPusherDefault.m_defaultIpAddress;
         public int      m_ipPort = UDPPusherDefault.m_defaultIpPort;
-        public UDPTarget()
+        public UDPTargetParams()
         {
             m_ipAddress = UDPPusherDefault.m_defaultIpAddress;
             m_ipPort = UDPPusherDefault.m_defaultIpPort;
         } 
 
-        public UDPTarget(string ipAddress, int ipPort)
+        public UDPTargetParams(string ipAddress, int ipPort)
         {
             m_ipAddress = ipAddress;
             m_ipPort = ipPort;

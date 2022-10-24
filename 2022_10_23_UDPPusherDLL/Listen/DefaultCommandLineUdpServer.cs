@@ -4,9 +4,9 @@ using System.Threading;
 namespace UDPPusherOmiDLL
 {
     /// <summary>
-    /// Will create a thread 
+    /// Allows to create quickly a small omi server if you need demo or default version. (Don't mean that the application will use it in the end).
     /// </summary>
-    public class DefaultCommandLineUdpServer {
+    public class DefaultCommandLineUdpServer : IUdpMessageReceiver {
 
         ThreadReceivedMessageQueue m_messageHolder;
         UDPListenerThread m_udpThreadListener;
@@ -34,11 +34,15 @@ namespace UDPPusherOmiDLL
             m_messageHolder.FlushReceivedMessagesInRef(ref list);
         }
 
+        public void KillAndDisposeTheThread()
+        {
+            m_messageHolder.FlushReceivedMessages(out List<string> l);
+            m_udpThreadListener.Kill();
+        }
+
         ~DefaultCommandLineUdpServer() {
             m_udpThreadListener.RemoveListener(m_messageHolder.AddMessageReceived); 
         }
-
-      
 
     }
 }
