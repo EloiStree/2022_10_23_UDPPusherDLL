@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace UDPPusherOmiDLL
+namespace UDPPusherDLL
 {
     public class UdpMessagePusherBuilder {
 

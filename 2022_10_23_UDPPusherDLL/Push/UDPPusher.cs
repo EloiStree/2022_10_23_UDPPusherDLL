@@ -2,7 +2,7 @@
 using System.Net.Sockets;
 using System.Text;
 
-namespace UDPPusherOmiDLL
+namespace UDPPusherDLL
 {/// <summary>
 /// Just a quick class that allows to send udp message to a address and a port.
 /// </summary>

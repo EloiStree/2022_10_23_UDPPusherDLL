@@ -1,4 +1,4 @@
-﻿namespace UDPPusherOmiDLL
+﻿namespace UDPPusherDLL
 {
     /// <summary>
     /// Allows to set the boolean name in OMI application by using UDP message.

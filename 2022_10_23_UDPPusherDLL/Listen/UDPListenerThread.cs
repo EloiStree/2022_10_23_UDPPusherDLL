@@ -4,7 +4,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 
-namespace UDPPusherOmiDLL
+namespace UDPPusherDLL
 {
     /// <summary>
     /// This class is just a quick UDP server in case you need a demo of default for your application.

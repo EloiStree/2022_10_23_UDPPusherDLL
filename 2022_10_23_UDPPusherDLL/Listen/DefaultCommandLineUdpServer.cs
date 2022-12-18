@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 
-namespace UDPPusherOmiDLL
+namespace UDPPusherDLL
 {
     /// <summary>
     /// Allows to create quickly a small omi server if you need demo or default version. (Don't mean that the application will use it in the end).

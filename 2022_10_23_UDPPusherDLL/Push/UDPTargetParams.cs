@@ -1,4 +1,4 @@
-﻿namespace UDPPusherOmiDLL
+﻿namespace UDPPusherDLL
 {
 
     /// <summary>
